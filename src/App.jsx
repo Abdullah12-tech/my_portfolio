@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./pages/home"
 import Navbar from "./components/navbar"
 import ProjectsPage from "./pages/project"
 import AboutPage from "./pages/about"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Home from "./pages/home"
 gsap.registerPlugin(ScrollTrigger)
 
 const CustomCursor = () => {
