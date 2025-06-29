@@ -1,9 +1,9 @@
 import Contact from "../components/contact"
 import Experience from "../components/ExperienceSection";
 import Hero from "../components/HeroSection";
-import Skills from "../components/Skills";
+import Skills from "../components/SkillsSection";
 import Testimonials from "../components/Testimonial";
-import WhatICanDo from "../components/whatICando";
+import WhatICanDo from "../components/WhatICan";
 
 
 const Home = ()=>{
