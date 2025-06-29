@@ -1,6 +1,19 @@
 import { useRef, useState } from "react";
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
+
+import Trackify from "../assets/projects/trackify.png";
+import ATCAfrica from "../assets/projects/atc_Africa.png";
+import GuessingGame from "../assets/projects/guessing.png";
+import CBT from "../assets/projects/cbt.png";
+import Ludo from "../assets/projects/ludo.jpg";
+import Recharge from "../assets/projects/recharge_card.png";
+import Recipy from "../assets/projects/recipy.png";
+import Upwork from "../assets/projects/upwork_clone.png";
+import Mindsync from "../assets/projects/mindsync_ai.png";
+import SignSignUp from "../assets/projects/signin_signup.png";
+import StudentManagement from "../assets/projects/studentManagement.png";
+
 const Projects = () => {
   const [filter, setFilter] = useState("all");
   const projectsRef = useRef(null);
@@ -12,7 +25,7 @@ const Projects = () => {
       category: "personal",
       description: "Developed a professional and responsive website for ATC Africa, showcasing their telecom infrastructure services with clean UI and optimized performance",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/src/assets/projects/atc_Africa.png",
+      image: ATCAfrica,
     },
     {
       id: 2,
@@ -20,7 +33,7 @@ const Projects = () => {
       category: "personal",
       description: "A simple computer-based test system where users can start a test, answer multiple-choice questions, complete the test, and instantly view their results. Ideal for basic exam simulations.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/cbt.png",
+      image: CBT,
     },
     {
       id: 3,
@@ -28,7 +41,7 @@ const Projects = () => {
       category: "personal",
       description: "A static frontend layout of the popular Ludo game created using only HTML and CSS. Demonstrates design creativity and visual layout skills without interactivity.",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/src/assets/projects/ludo.jpg",
+      image: Ludo,
     },
     {
       id: 4,
@@ -36,7 +49,7 @@ const Projects = () => {
       category: "client",
       description: "Designed and implemented a sleek frontend for Mindsync_Ai to present their AI-based solutions. Focused on clear branding, structured content, and modern design aesthetics",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/mindsync_ai.png",
+      image: Mindsync,
     },
     {
       id: 5,
@@ -44,7 +57,7 @@ const Projects = () => {
       category: "personal",
       description: "Generates virtual recharge card pins for testing/demo purposes. Includes features like random pin creation and a simple display format mimicking real card designs.",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/src/assets/projects/recharge_card.png",
+      image: Recharge,
     },
     {
       id: 6,
@@ -52,7 +65,7 @@ const Projects = () => {
       category: "client",
       description: "Frontend UI for user authentication. Includes separate sign-in and sign-up forms with field validations using JavaScript, designed for easy integration into larger apps.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/signin_signup.png",
+      image: SignSignUp,
     },
     {
       id: 7,
@@ -60,7 +73,7 @@ const Projects = () => {
       category: "client",
       description: "A frontend clone of the Upwork website’s homepage crafted with semantic HTML and CSS. Highlights attention to detail and design replication skills.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/upwork_clone.png",
+      image: Upwork,
     },
     {
       id: 8,
@@ -68,7 +81,7 @@ const Projects = () => {
       category: "personal",
       description: "A full-featured web app for tracking income, expenses, and financial goals. Includes real-time updates, category-based analysis, monthly summaries, and Firebase integration for data storage.",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/src/assets/projects/trackify.png",
+      image: Trackify,
     },
     {
       id: 9,
@@ -76,7 +89,7 @@ const Projects = () => {
       category: "client",
       description: "A basic but fun JavaScript-powered game that challenges users to guess a randomly generated number within a limited number of tries.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/guessing.png",
+      image: GuessingGame,
     },
     {
       id: 10,
@@ -84,7 +97,7 @@ const Projects = () => {
       category: "client",
       description: "Built a user-friendly recipe platform that allows users to browse, share, and view cooking instructions. Designed for food enthusiasts with an emphasis on clean visuals and usability.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/recipy.png",
+      image: Recipy,
     },
     {
       id: 11,
@@ -92,7 +105,7 @@ const Projects = () => {
       category: "client",
       description: "A lightweight application for adding, deleting, and searching student records. Focused on core CRUD functionality with a clean and user-friendly interface.",
       tags: ["D3.js", "TypeScript"],
-      image: "/src/assets/projects/studentManagement.png",
+      image: StudentManagement,
     },
     // More projects...
   ];

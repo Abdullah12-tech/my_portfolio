@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import ProfilePhoto from "../assets/profile/myprofile.gif";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -130,7 +130,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-teal-500/20 rounded-full opacity-30 blur-xl animate-pulse"></div>
           <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-4 border-teal-500 dark:border-teal-400">
             <img
-              src="/src/assets/myprofile.gif"
+              src={ProfilePhoto}
               alt="3D Profile"
               className="w-full h-full object-cover"
             />
