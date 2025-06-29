@@ -2,8 +2,8 @@ import Contact from "../components/contact"
 import Experience from "../components/ExperienceSection";
 import Hero from "../components/HeroSection";
 import Skills from "../components/SkillsSection";
-import Testimonials from "../components/Testimonial";
-import WhatICanDo from "../components/WhatICan";
+import Testimonials from "../components/TestimonialSection";
+import WhatICanDo from "../components/WhatICanSection";
 
 
 const Home = ()=>{
