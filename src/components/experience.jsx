@@ -130,5 +130,4 @@ const Experience = () => {
     </section>
   );
 };
-
 export default Experience;

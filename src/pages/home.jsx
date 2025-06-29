@@ -1,8 +1,8 @@
 
 import Contact from "../components/contact"
-import Experience from "../components/experience";
 import Hero from "../components/HeroSection";
 import Skills from "../components/skills";
+import Experience from "../components/Experience"
 import Testimonials from "../components/Testimonial";
 import WhatICanDo from "../components/WhatICando";
 
