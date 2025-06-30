@@ -3,9 +3,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Register ScrollTrigger plugin
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
+// if (typeof window !== 'undefined') {
+gsap.registerPlugin(ScrollTrigger);
+// }
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -36,7 +36,7 @@ const Contact = () => {
       // Animation for form elements
       if (formRef.current) {
         const formElements = formRef.current.querySelectorAll('input, textarea, button');
-        
+
         gsap.from(formElements, {
           opacity: 0,
           y: 30,
@@ -59,7 +59,7 @@ const Contact = () => {
               duration: 0.2
             });
           });
-          
+
           submitBtn.addEventListener('mouseleave', () => {
             gsap.to(submitBtn, {
               scale: 1,
@@ -88,24 +88,24 @@ const Contact = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // In a real app, you would send the form data to your backend here
       console.log('Form submitted:', formData);
-      
+
       setSubmitStatus({
         success: true,
         message: 'Message sent successfully!'
       });
-      
+
       // Reset form
       setFormData({
         name: '',
         email: '',
         message: ''
       });
-      
+
       // Success animation
-      gsap.fromTo('.submit-success', 
+      gsap.fromTo('.submit-success',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6 }
       );
@@ -114,9 +114,9 @@ const Contact = () => {
         success: false,
         message: 'Failed to send message. Please try again.'
       });
-      
+
       // Error animation
-      gsap.fromTo('.submit-error', 
+      gsap.fromTo('.submit-error',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6 }
       );
@@ -134,14 +134,14 @@ const Contact = () => {
         <p className="text-slate-300 mb-12 text-center max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? Feel free to reach out!
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div ref={contactInfoRef}>
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
             <p className="text-slate-300 mb-6">
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
             </p>
-            
+
             <div className="space-y-4">
               <div className="flex items-start">
                 <div className="bg-teal-500/20 p-3 rounded-lg mr-4">
@@ -156,7 +156,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-teal-500/20 p-3 rounded-lg mr-4">
                   <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +170,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-teal-500/20 p-3 rounded-lg mr-4">
                   <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,10 +183,36 @@ const Contact = () => {
                   <p className="text-teal-400">San Francisco, CA</p>
                 </div>
               </div>
+              <div className="flex items-center pt-4">
+                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <form 
+
+          <form
             ref={formRef}
             onSubmit={handleSubmit}
             className="space-y-6"
@@ -203,7 +229,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="email" className="block text-slate-300 mb-2">Email</label>
               <input
@@ -216,7 +242,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block text-slate-300 mb-2">Message</label>
               <textarea
@@ -229,7 +255,7 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}

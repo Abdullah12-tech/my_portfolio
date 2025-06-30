@@ -102,7 +102,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 overflow-hidden"
+      className="relative overflow-x-hidden min-h-screen max-h-[] flex items-center justify-center px-6 md:px-12 lg:px-24 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-24">
         <div ref={textRef} className="z-10 md:w-1/2">

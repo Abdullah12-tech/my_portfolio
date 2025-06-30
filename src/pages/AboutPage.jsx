@@ -97,11 +97,11 @@ const AboutPage = () => {
           <h2 className="text-2xl font-bold mb-6 text-slate-800 dark:text-white">
             Fun Facts
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-6">
             {[
-              { number: "50+", label: "Projects Completed" },
-              { number: "100%", label: "Client Satisfaction" },
-              { number: "10+", label: "Countries Visited" },
+              { number: "15+", label: "Projects Completed" },
+              { number: "99.9%", label: "Client Satisfaction" },
+              { number: "2+", label: "Countries Visited" },
               { number: "∞", label: "Cups of Coffee" },
             ].map((fact, index) => (
               <div
