@@ -20,7 +20,7 @@ const AboutPage = () => {
               Who Am I?
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mb-6">
-              I'm a passionate full-stack developer with 5+ years of experience creating digital experiences that users love. My journey started when I built my first website at 15, and I've been hooked ever since.
+              I'm a passionate full-stack developer with 1+ years of experience creating digital experiences that users love. My journey started when I built my first website at 16, and I've been hooked ever since.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-6">
               When I'm not coding, you can find me hiking, playing guitar, or experimenting with new cooking recipes.
@@ -61,19 +61,19 @@ const AboutPage = () => {
 
               {[
                 {
-                  year: "2018",
-                  title: "First Web Project",
-                  description: "Built a personal blog using HTML/CSS",
+                  year: "2023",
+                  title: "Enrol for a Graphics Design Course",
+                  description: "Design some high catching design",
                 },
                 {
-                  year: "2020",
-                  title: "Freelance Developer",
+                  year: "2024",
+                  title: "Build an Expense Tracker Website",
+                  description: "Starting building real world projects",
+                },
+                {
+                  year: "2025",
+                  title: "Frontend Developer",
                   description: "Started taking on client projects",
-                },
-                {
-                  year: "2022",
-                  title: "Senior Developer",
-                  description: "Promoted to lead a team of 5 developers",
                 },
               ].map((item, index) => (
                 <div key={index} className="relative pl-16 pb-8">

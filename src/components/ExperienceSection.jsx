@@ -13,35 +13,13 @@ const Experience = () => {
       role: "Senior Frontend Developer",
       company: "ATC Africa",
       period: "2025 - Present",
-      description: "Leading the frontend team to build responsive and accessible web applications.",
+      description: "Design and develop the ATC Africa Meetup website.",
       highlights: [
-        "Implemented micro-frontend architecture",
-        "Improved performance by 40%",
-        "Mentored junior developers"
+        "Ensure fast loading",
+        "Animate the website using gsap",
+        "Ensure mobile responsive design"
       ]
     },
-    {
-      role: "Frontend Developer",
-      company: "Nehonix Mindsync",
-      period: "",
-      description: "Developed and maintained multiple client-facing applications.",
-      highlights: [
-        "Built a design system from scratch",
-        "Reduced bundle size by 30%",
-        "Introduced automated testing"
-      ]
-    },
-    {
-      role: "Junior Web Developer",
-      company: "StartUp Ventures",
-      period: "2016 - 2018",
-      description: "Built and maintained company website and internal tools.",
-      highlights: [
-        "Implemented CI/CD pipeline",
-        "Redesigned company website",
-        "Improved SEO rankings"
-      ]
-    }
   ];
 
   useEffect(() => {
@@ -99,7 +77,7 @@ const Experience = () => {
             >
               <div className="relative w-full md:w-5/12">
                 {/* Dot with pulse animation */}
-                <div className="timeline-dot absolute top-6 left-1/2 w-5 h-5 rounded-full bg-teal-500 transform -translate-x-1/2 z-10 shadow-md"></div>
+                <div className="timeline-dot absolute top-2 left-1/2 w-5 h-5 rounded-full bg-teal-500 transform -translate-x-1/2 z-10 shadow-md"></div>
                 
                 {/* Content card */}
                 <div className="timeline-content bg-white p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow duration-300">

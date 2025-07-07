@@ -131,12 +131,12 @@ const Hero = () => {
           </h2>
 
           <div className="flex gap-4">
-            <button className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-teal-500/20">
+            <a href="https://github.com/Abdullah12-tech" target='_blank'><button className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-teal-500/20">
               View My Work
-            </button>
-            <button className="px-6 py-3 border border-slate-400 hover:border-teal-500 text-slate-700 dark:text-slate-300 rounded-full font-medium transition-all transform hover:scale-105">
+            </button></a>
+            <a href="" target='_blank'><button className="px-6 py-3 border border-slate-400 hover:border-teal-500 text-slate-700 dark:text-slate-300 rounded-full font-medium transition-all transform hover:scale-105">
               Download CV
-            </button>
+            </button></a>
           </div>
         </div>
 
