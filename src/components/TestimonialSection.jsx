@@ -7,9 +7,9 @@ const Testimonials = () => {
       video: "/testimonial1.mp4",
     },
     {
-      name: "Michael Chen",
-      role: "Product Manager, DesignCo",
-      quote: "The attention to detail and creativity Alex brings is unmatched in the industry.",
+      name: "Abdulwaris Abdullah",
+      role: "Colleagues, SQI College of ICT",
+      quote: "The attention to detail and creativity A brings is unmatched in the industry.",
       video: "/testimonial2.mp4",
     },
   ];

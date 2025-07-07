@@ -11,8 +11,8 @@ const Experience = () => {
   const experiences = [
     {
       role: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
+      company: "ATC Africa",
+      period: "2025 - Present",
       description: "Leading the frontend team to build responsive and accessible web applications.",
       highlights: [
         "Implemented micro-frontend architecture",
@@ -22,8 +22,8 @@ const Experience = () => {
     },
     {
       role: "Frontend Developer",
-      company: "Digital Solutions Co.",
-      period: "2018 - 2021",
+      company: "Nehonix Mindsync",
+      period: "",
       description: "Developed and maintained multiple client-facing applications.",
       highlights: [
         "Built a design system from scratch",

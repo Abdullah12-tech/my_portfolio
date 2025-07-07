@@ -22,12 +22,12 @@ const Projects = () => {
     {
       id: 1,
       title: "A meetup Website",
-      category: "personal",
+      category: "client",
       description: "Developed a professional and responsive website for ATC Africa, showcasing their telecom infrastructure services with clean UI and optimized performance",
       tags: ["Nextjs", "Tailwind", "Html/css"],
       image: ATCAfrica,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://ibadan.atcafrica.com/",
+      githubLink: "https://github.com/amazingtechcom/ibadantechmeet",
     },
     {
       id: 2,
@@ -36,8 +36,8 @@ const Projects = () => {
       description: "A simple computer-based test system where users can start a test, answer multiple-choice questions, complete the test, and instantly view their results. Ideal for basic exam simulations.",
       tags: ["Html/Css", "Javascript", "Bootstrap"],
       image: CBT,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/Computer-Based-Test/",
+      githubLink: "https://github.com/Abdullah12-tech/Computer-Based-Test",
     },
     {
       id: 3,
@@ -46,90 +46,79 @@ const Projects = () => {
       description: "A static frontend layout of the popular Ludo game created using only HTML and CSS. Demonstrates design creativity and visual layout skills without interactivity.",
       tags: ["Html", "Css"],
       image: Ludo,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/ludo_board/",
+      githubLink: "https://github.com/Abdullah12-tech/ludo_board",
     },
     {
       id: 4,
-      title: "Document Generator AI",
-      category: "client",
-      description: "Designed and implemented a sleek frontend for Mindsync_Ai to present their AI-based solutions. Focused on clear branding, structured content, and modern design aesthetics",
-      tags: ["React","Vite", "TypeScript"],
-      image: Mindsync,
-      livelink: "",
-      githubLink: "",
-    },
-    {
-      id: 5,
       title: "Rechard Card Generator",
       category: "personal",
       description: "Generates virtual recharge card pins for testing/demo purposes. Includes features like random pin creation and a simple display format mimicking real card designs.",
       tags: ["Html/Css", "Bootstrap", "Javascript"],
       image: Recharge,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/Recharge-card-generator/",
+      githubLink: "https://github.com/Abdullah12-tech/Recharge-card-generator",
     },
     {
-      id: 6,
+      id: 5,
       title: "SignIn-SignUp System",
-      category: "client",
+      category: "personal",
       description: "Frontend UI for user authentication. Includes separate sign-in and sign-up forms with field validations using JavaScript, designed for easy integration into larger apps.",
       tags: ["Html/Css", "Javascript"],
       image: SignSignUp,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/Signin-Signup-System",
+      githubLink: "https://github.com/Abdullah12-tech/Signin-Signup-System",
     },
     {
-      id: 7,
+      id: 6,
       title: "Upwork Clone",
-      category: "client",
+      category: "personal",
       description: "A frontend clone of the Upwork website’s homepage crafted with semantic HTML and CSS. Highlights attention to detail and design replication skills.",
       tags: ["Html", "Css"],
       image: Upwork,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/Abdullahtheplug-website",
+      githubLink: "https://github.com/Abdullah12-tech/Abdullahtheplug-website",
     },
     {
-      id: 8,
+      id: 7,
       title: "Trackify - An Expense Tracker Website",
       category: "personal",
       description: "A full-featured web app for tracking income, expenses, and financial goals. Includes real-time updates, category-based analysis, monthly summaries, and Firebase integration for data storage.",
       tags: ["Html/Css","Javascript", "Tailwind", "Firebase"],
       image: Trackify,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://trackify-drab.vercel.app/",
+      githubLink: "https://github.com/Abdullah12-tech/Trackify",
     },
     {
-      id: 9,
+      id: 8,
       title: "Guessing Game",
-      category: "client",
+      category: "personal",
       description: "A basic but fun JavaScript-powered game that challenges users to guess a randomly generated number within a limited number of tries.",
       tags: ["Html/Css", "Javascript"],
       image: GuessingGame,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/guessing_game/",
+      githubLink: "https://github.com/Abdullah12-tech/guessing_game",
     },
     {
-      id: 10,
-      title: "Recipy - A recipy sharing app",
+      id: 9,
+      title: "Recipy- recipy sharing",
       category: "client",
       description: "Built a user-friendly recipe platform that allows users to browse, share, and view cooking instructions. Designed for food enthusiasts with an emphasis on clean visuals and usability.",
       tags: ["Html/Css","Javascript", "Tailwind", "Firebase"],
       image: Recipy,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/Recipy",
+      githubLink: "https://github.com/Abdullah12-tech/Recipy",
     },
     {
-      id: 11,
+      id: 10,
       title: "Student Management System",
-      category: "client",
+      category: "personal",
       description: "A lightweight application for adding, deleting, and searching student records. Focused on core CRUD functionality with a clean and user-friendly interface.",
       tags: ["Html/Css","Bootstrap", "Javascript"],
       image: StudentManagement,
-      livelink: "",
-      githubLink: "",
+      livelink: "https://abdullah12-tech.github.io/student_management/",
+      githubLink: "https://github.com/Abdullah12-tech/student_management",
     },
-    // More projects...
   ];
 
   useGSAP(() => {
@@ -181,22 +170,22 @@ const Projects = () => {
         {/* Projects Grid */}
         <div
           ref={projectsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="project-card group relative h-96 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="project-card group relative h-96 rounded-xl border border-2 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
             >
-              <div className="absolute inset-0 overflow-hidden">
+              <div className="inset-0 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="project-image w-30 object-contain transition-transform duration-500"
+                  className="project-image w-full object-contain transition-transform duration-500"
                 />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div> */}
               </div>
-              <div className="absolute bg-[#0d9488] min-h-64 bottom-0 left-0 p-6 w-full">
+              <div className="absolute bg-[#0d9488] min-h-32 bottom-0 left-0 p-4 w-full">
                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-slate-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
@@ -208,6 +197,10 @@ const Projects = () => {
                       {tag}
                     </span>
                   ))}
+                </div>
+                <div className="flex flex-wrap gap-4 items-center mt-3">
+                  <a href={project.livelink}><button className="p-2 rounded-md bg-teal-500">Live</button></a>
+                  <a href={project.githubLink} target="_blank"><button className="p-2 rounded-md bg-white">Github</button></a>
                 </div>
               </div>
             </div>

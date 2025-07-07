@@ -18,12 +18,6 @@ const WhatICanDo = () => {
       icon: "✨",
       color: "bg-teal-500/10 text-teal-500",
     },
-    {
-      title: "Consulting",
-      description: "Helping you plan and optimize your digital strategy.",
-      icon: "📈",
-      color: "bg-orange-500/10 text-orange-500",
-    },
   ];
 
   return (

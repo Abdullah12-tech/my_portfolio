@@ -10,13 +10,14 @@ if (typeof window !== 'undefined') {
 const Skills = () => {
   const skills = [
     { name: 'React', level: 95, color: 'bg-blue-500' },
+    { name: 'Vue', level: 94, color: 'bg-blue-500' },
     { name: 'JavaScript', level: 90, color: 'bg-yellow-500' },
-    { name: 'TypeScript', level: 85, color: 'bg-blue-600' },
     { name: 'Node.js', level: 88, color: 'bg-green-500' },
+    { name: 'Html/Css', level: 88, color: 'bg-green-500' },
     { name: 'Tailwind CSS', level: 93, color: 'bg-teal-400' },
     { name: 'GSAP', level: 80, color: 'bg-green-600' },
-    { name: 'UI/UX Design', level: 85, color: 'bg-purple-500' },
-    { name: 'GraphQL', level: 75, color: 'bg-pink-600' },
+    { name: 'Express.js', level: 85, color: 'bg-purple-500' },
+    { name: 'Firebase', level: 75, color: 'bg-pink-600' },
   ];
 
   const gridRef = useRef(null);

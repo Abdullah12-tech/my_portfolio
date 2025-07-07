@@ -18,60 +18,60 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  useEffect(() => {
-    // Create a GSAP context for all animations
-    const ctx = gsap.context(() => {
-      // Animation for the contact info section
-      gsap.from(contactInfoRef.current, {
-        opacity: 0,
-        x: -50,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: contactInfoRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none"
-        }
-      });
+  // useEffect(() => {
+  //   // Create a GSAP context for all animations
+  //   const ctx = gsap.context(() => {
+  //     // Animation for the contact info section
+  //     gsap.from(contactInfoRef.current, {
+  //       opacity: 0,
+  //       x: -50,
+  //       duration: 0.8,
+  //       scrollTrigger: {
+  //         trigger: contactInfoRef.current,
+  //         start: "top 80%",
+  //         toggleActions: "play none none none"
+  //       }
+  //     });
 
-      // Animation for form elements
-      if (formRef.current) {
-        const formElements = formRef.current.querySelectorAll('input, textarea, button');
+  //     // Animation for form elements
+  //     if (formRef.current) {
+  //       const formElements = formRef.current.querySelectorAll('input, textarea, button');
 
-        gsap.from(formElements, {
-          opacity: 0,
-          y: 30,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "back.out(1.2)",
-          scrollTrigger: {
-            trigger: formRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none"
-          }
-        });
+  //       gsap.from(formElements, {
+  //         opacity: 0,
+  //         y: 30,
+  //         duration: 0.6,
+  //         stagger: 0.1,
+  //         ease: "back.out(1.2)",
+  //         scrollTrigger: {
+  //           trigger: formRef.current,
+  //           start: "top 80%",
+  //           toggleActions: "play none none none"
+  //         }
+  //       });
 
-        // Hover animation for submit button
-        const submitBtn = formRef.current.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          submitBtn.addEventListener('mouseenter', () => {
-            gsap.to(submitBtn, {
-              scale: 1.05,
-              duration: 0.2
-            });
-          });
+  //       // Hover animation for submit button
+  //       const submitBtn = formRef.current.querySelector('button[type="submit"]');
+  //       if (submitBtn) {
+  //         submitBtn.addEventListener('mouseenter', () => {
+  //           gsap.to(submitBtn, {
+  //             scale: 1.05,
+  //             duration: 0.2
+  //           });
+  //         });
 
-          submitBtn.addEventListener('mouseleave', () => {
-            gsap.to(submitBtn, {
-              scale: 1,
-              duration: 0.2
-            });
-          });
-        }
-      }
-    });
+  //         submitBtn.addEventListener('mouseleave', () => {
+  //           gsap.to(submitBtn, {
+  //             scale: 1,
+  //             duration: 0.2
+  //           });
+  //         });
+  //       }
+  //     }
+  //   });
 
-    return () => ctx.revert(); // Cleanup
-  }, []);
+  //   return () => ctx.revert(); // Cleanup
+  // }, []);
 
   const handleChange = (e) => {
     setFormData({
