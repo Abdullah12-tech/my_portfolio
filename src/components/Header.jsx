@@ -15,9 +15,6 @@ const Navbar = () => {
           <a href="/" className={`nav-link font-medium text-slate-200`}>Home</a>
           <a href="/projects" className={`nav-link font-medium text-slate-200`}>Projects</a>
           <a href="/about" className={`nav-link font-medium text-slate-200`}>About</a>
-          <a href="#contact"><button className="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-medium transition-all">
-            Contact
-          </button></a>
         </div>
 
         <button
@@ -42,9 +39,6 @@ const Navbar = () => {
             <a href="/" className="nav-link font-medium dark:text-slate-200 text-slate-800">Home</a>
             <a href="/projects" className="nav-link font-medium dark:text-slate-200 text-slate-800">Projects</a>
             <a href="/about" className="nav-link font-medium dark:text-slate-200 text-slate-800">About</a>
-            <button className="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-medium">
-              Contact
-            </button>
           </div>
         </div>
       )}

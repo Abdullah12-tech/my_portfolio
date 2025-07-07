@@ -1,22 +1,25 @@
+import frontend from "../assets/profile/frontend.jpg"
+import backend from "../assets/profile/backend.jpg"
+import animation from "../assets/profile/animation.jpeg"
 const WhatICanDo = () => {
   const services = [
     {
       title: "Web Development",
       description: "Building fast, responsive, and scalable web applications with modern tech stacks.",
-      icon: "💻",
-      color: "bg-blue-500/10 text-blue-500",
+      image: frontend,
+      color: "hover:border-blue-500",
     },
     {
-      title: "UI/UX Design",
-      description: "Creating intuitive and beautiful interfaces that users love.",
-      icon: "🎨",
-      color: "bg-purple-500/10 text-purple-500",
+      title: "Backend Development",
+      description: "Designing robust, secure, and scalable server-side systems and APIs.",
+      image: backend, // Backend server image
+      color: "hover:border-red-500",
     },
     {
       title: "Animation Magic",
       description: "Adding smooth, engaging animations to make your site stand out.",
-      icon: "✨",
-      color: "bg-teal-500/10 text-teal-500",
+      image: animation,
+      color: "hover:border-teal-500",
     },
   ];
 
@@ -30,14 +33,22 @@ const WhatICanDo = () => {
           I specialize in creating digital experiences that are not just functional, but delightful.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-8 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl ${service.color} dark:bg-opacity-20`}
+              className={`group bg-white dark:bg-slate-800 border border-transparent rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 p-6 ${service.color}`}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-white">{service.title}</h3>
+              <div className="overflow-hidden rounded-lg mb-4">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">
+                {service.title}
+              </h3>
               <p className="text-slate-600 dark:text-slate-400">{service.description}</p>
             </div>
           ))}

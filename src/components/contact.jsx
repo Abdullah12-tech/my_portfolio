@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import emailjs from "@emailjs/browser"
 
 // Register ScrollTrigger plugin
 // if (typeof window !== 'undefined') {
@@ -80,50 +81,55 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus(null);
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+  try {
+    const result = await emailjs.sendForm(
+      'service_vzzm2kq',      
+      'template_79efo99',
+      formRef.current,
+      'f1O6yrXhTHKe7R6JI'  
+    );
 
-      // In a real app, you would send the form data to your backend here
-      console.log('Form submitted:', formData);
+    console.log('Email successfully sent!', result.text);
 
-      setSubmitStatus({
-        success: true,
-        message: 'Message sent successfully!'
-      });
+    setSubmitStatus({
+      success: true,
+      message: 'Message sent successfully!',
+    });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
 
-      // Success animation
-      gsap.fromTo('.submit-success',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 }
-      );
-    } catch (error) {
-      setSubmitStatus({
-        success: false,
-        message: 'Failed to send message. Please try again.'
-      });
+    gsap.fromTo(
+      '.submit-success',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6 }
+    );
+  } catch (error) {
+    console.error('Failed to send email:', error);
 
-      // Error animation
-      gsap.fromTo('.submit-error',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 }
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    setSubmitStatus({
+      success: false,
+      message: 'Failed to send message. Please try again.',
+    });
+
+    gsap.fromTo(
+      '.submit-error',
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6 }
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <section id="contact" className="py-20 px-8 md:px-16 lg:px-24 bg-slate-900 text-white">
@@ -184,29 +190,23 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex items-center pt-4">
-                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://web.facebook.com/Abdullahtheplug/" target="_blank"></a><i className="fa-brands fa-facebook"></i>
                 </div>
-                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://www.instagram.com/abdullahakinkunmi26/" target="_blank"></a><i className="fa-brands fa-instagram"></i>
                 </div>
-                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://wa.me/2347039705647" target="_blank"></a><i className="fa-brands fa-whatsapp"></i>
                 </div>
-                <div className="bg-teal-500/20 p-3 rounded-lg mr-6">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://x.com/Sheriff15151395" target="_blank"></a><i className="fa-brands fa-twitter"></i>
+                </div>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://www.linkedin.com/in/abdullah-sheriff-916260366/" target="_blank"></a><i className="fa-brands fa-linkedin"></i>
+                </div>
+                <div className="p-2 rounded-lg mr-4">
+                  <a href="https://github.com/Abdullah12-tech" target="_blank"></a><i className="fa-brands fa-github"></i>
                 </div>
               </div>
             </div>

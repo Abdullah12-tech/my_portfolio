@@ -122,44 +122,58 @@ const Projects = () => {
   ];
 
   useGSAP(() => {
-    // Card hover effect
     gsap.utils.toArray(".project-card").forEach((card) => {
       card.addEventListener("mouseenter", () => {
         gsap.to(card.querySelector(".project-image"), {
-          scale: 1.05,
-          duration: 0.3,
+          scale: 1.1,
+          rotate: 1,
+          duration: 0.4,
+          ease: "power3.out",
+        });
+        gsap.to(card.querySelector(".project-overlay"), {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
         });
       });
       card.addEventListener("mouseleave", () => {
         gsap.to(card.querySelector(".project-image"), {
           scale: 1,
-          duration: 0.3,
+          rotate: 0,
+          duration: 0.4,
+          ease: "power3.out",
+        });
+        gsap.to(card.querySelector(".project-overlay"), {
+          y: 40,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in",
         });
       });
     });
   }, [filter]);
 
-  const filteredProjects = filter === "all" 
-    ? projects 
+  const filteredProjects = filter === "all"
+    ? projects
     : projects.filter(project => project.category === filter);
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-slate-50 dark:bg-slate-900">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-slate-800 dark:text-white">
-          My Projects
+    <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-5xl font-extrabold text-center text-teal-600 dark:text-teal-400 mb-16">
+          Featured Projects
         </h1>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex justify-center gap-4 flex-wrap mb-12">
           {["all", "personal", "client"].map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-full capitalize ${
+              className={`px-5 py-2.5 rounded-full capitalize font-semibold text-sm transition-all duration-300 border-2 ${
                 filter === category
-                  ? "bg-teal-500 text-white"
-                  : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200"
+                  ? "bg-teal-600 text-white border-teal-600 shadow-md shadow-teal-500/40"
+                  : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-600 hover:bg-teal-100 dark:hover:bg-slate-700"
               }`}
             >
               {category}
@@ -167,47 +181,51 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
         <div
           ref={projectsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="project-card group relative h-96 rounded-xl border border-2 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="project-card relative rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-slate-800 transition-transform duration-500 hover:scale-[1.03] group"
             >
-              <div className="inset-0 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image w-full object-contain transition-transform duration-500"
-                />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div> */}
-              </div>
-              <div className="absolute bg-[#0d9488] min-h-32 bottom-0 left-0 p-4 w-full">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-slate-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image w-full h-56 object-cover transition-transform duration-500 ease-in-out"
+              />
+              <div className="project-overlay absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-slate-900/90 to-slate-900/40 backdrop-blur-sm translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+                <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+                <p className="text-sm text-slate-200 mb-3 line-clamp-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-slate-800/80 text-slate-300 rounded-full text-sm"
+                      className="bg-white/20 text-xs text-white px-2 py-1 rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex flex-wrap gap-4 items-center mt-3">
-                  <a href={project.livelink}><button className="p-2 rounded-md bg-teal-500">Live</button></a>
-                  <a href={project.githubLink} target="_blank"><button className="p-2 rounded-md bg-white">Github</button></a>
+                <div className="flex gap-3">
+                  <a href={project.livelink} target="_blank" rel="noopener noreferrer">
+                    <button className="px-4 py-1.5 bg-teal-500 hover:bg-teal-600 text-white rounded-full text-sm font-semibold shadow-md">
+                      Live
+                    </button>
+                  </a>
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                    <button className="px-4 py-1.5 bg-white text-slate-800 dark:bg-slate-700 dark:text-white rounded-full text-sm font-semibold shadow-md">
+                      GitHub
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      </section>
+    </section>
   );
 };
 
