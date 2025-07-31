@@ -10,7 +10,7 @@ import Ludo from "../assets/projects/ludo.jpg";
 import Recharge from "../assets/projects/recharge_card.png";
 import Recipy from "../assets/projects/recipy.png";
 import Upwork from "../assets/projects/upwork_clone.png";
-import Mindsync from "../assets/projects/mindsync_ai.png";
+import JobFuse from "../assets/projects/jobFuse.png"
 import SignSignUp from "../assets/projects/signin_signup.png";
 import StudentManagement from "../assets/projects/studentManagement.png";
 
@@ -20,7 +20,7 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+      id: 0,
       title: "A meetup Website",
       category: "client",
       description: "Developed a professional and responsive website for ATC Africa, showcasing their telecom infrastructure services with clean UI and optimized performance",
@@ -28,6 +28,16 @@ const Projects = () => {
       image: ATCAfrica,
       livelink: "https://ibadan.atcafrica.com/",
       githubLink: "https://github.com/amazingtechcom/ibadantechmeet",
+    },
+    {
+      id: 1,
+      title: "JobFuse",
+      category: "personal",
+      description: "A Full Stack job board website that helps users find jobs and makes hiring easy for startups.",
+      tags: ["Html/Css", "JavasCript", "TailwindCss", "React.js", "Node.js","Express.js", "MongoDb"],
+      image: JobFuse,
+      livelink: "https://job-fuse.vercel.app/",
+      githubLink: "https://github.com/Abdullah12-tech/job_board_frontend.git",
     },
     {
       id: 2,

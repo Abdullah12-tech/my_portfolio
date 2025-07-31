@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Home from "./pages/HomePage"
+import Contact from "./components/contact"
 gsap.registerPlugin(ScrollTrigger)
 
 const CustomCursor = () => {
@@ -52,7 +53,7 @@ const CustomCursor = () => {
 };
 const App = () => {
   return (
-    <div className="w-screen">
+    <div className="w-screen overflow-x-hidden">
       <BrowserRouter>
         <CustomCursor/>
         <Navbar/>
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/projects" element={<ProjectsPage/>} />
         </Routes>
+        <Contact/>
       </BrowserRouter>
     </div>
   )

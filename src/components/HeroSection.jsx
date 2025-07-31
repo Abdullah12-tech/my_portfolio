@@ -113,20 +113,20 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-x-hidden min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
+      className="relative overflow-hidden flex items-center justify-center py-12 md:py-12 lg:py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-gray-200 to-gray-100"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-24">
         {/* Text Area */}
         <div className="z-10 md:w-1/2">
           <div ref={textRef}>
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-4">
               <span className="inline-block">Hey, I'm</span>
-              <span className="text-teal-500 dark:text-teal-400 block mt-2">Sheriff Abdullahi</span>
+              <span className="text-teal-500 dark:text-teal-500 block mt-2">Sheriff Abdullahi</span>
             </h1>
           </div>
 
           {/* Typing Effect */}
-          <h2 className="text-2xl font-semibold md:text-2xl text-slate-600 dark:text-slate-300 mt-6 mb-8">
+          <h2 className="text-2xl font-semibold md:text-2xl text-slate-700 mt-6 mb-8">
             {displayText}<span className="animate-pulse">|</span>
           </h2>
 
@@ -134,7 +134,7 @@ const Hero = () => {
             <a href="https://github.com/Abdullah12-tech" target='_blank'><button className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-teal-500/20">
               View My Work
             </button></a>
-            <a href="https://drive.google.com/file/d/1AEJb0FJgzF_o3EvL2x7AwYnfl5HTPk-y/view?usp=drive_link" target='_blank'><button className="px-6 py-3 border border-slate-400 hover:border-teal-500 text-slate-700 dark:text-slate-300 rounded-full font-medium transition-all transform hover:scale-105">
+            <a href="https://drive.google.com/file/d/1WwZLCL1hOspFhO3KfRn9xCT6b9-MG13W/view?usp=drive_link" target='_blank'><button className="px-6 py-3 border border-slate-400 hover:border-teal-500 text-slate-700 dark:text-slate-900 rounded-full font-medium transition-all transform hover:scale-105">
               Download CV
             </button></a>
           </div>
